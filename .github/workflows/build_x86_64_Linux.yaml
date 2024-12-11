@@ -164,7 +164,7 @@ jobs:
      #continuous
       - name: Releaser (Continuous)
         if: env.HAS_RELEASE == 'TRUE'
-        uses: softprops/action-gh-release@v2.1.0
+        uses: softprops/action-gh-release@v2.2.0
         with:
           name: "Continuous ${{ env.B_ARCH }}"
           tag_name: "${{ env.B_ARCH }}"
@@ -180,7 +180,7 @@ jobs:
      #Snapshot
       - name: Releaser (Snapshot)
         if: env.HAS_RELEASE == 'TRUE'
-        uses: softprops/action-gh-release@v2.1.0
+        uses: softprops/action-gh-release@v2.2.0
         with:
           name: "FLATIMAGE-(${{ env.FIM_VERSION}})-${{ env.UTC_TIME }}-${{ env.B_ARCH }}"
           tag_name: "${{ env.UTC_TIME }}-${{ env.B_ARCH }}"
